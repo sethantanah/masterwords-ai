@@ -17,14 +17,16 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DJANGO_DEBUG", "") != "False"
 
-ALLOWED_HOSTS = ['https://afa2-45-222-48-100.ngrok-free.app']
+ALLOWED_HOSTS = ['127.0.0.1','https://afa2-45-222-48-100.ngrok-free.app', 'https://web-production-bef9.up.railway.app']
 
 CORS_ALLOWED_ORIGINS = [
-    'https://afa2-45-222-48-100.ngrok-free.app'
+    'https://afa2-45-222-48-100.ngrok-free.app',
+    'https://web-production-bef9.up.railway.app'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://afa2-45-222-48-100.ngrok-free.app'
+    'https://afa2-45-222-48-100.ngrok-free.app',
+    'https://web-production-bef9.up.railway.app'
 ]
 
 INTERNAL_IPS = [
