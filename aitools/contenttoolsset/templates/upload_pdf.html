@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <div class="content">
+
+  <div id="popover-2" style="height:500px; width:100%; display:{% if loaded %} flex {%else %} none {% endif %}; position:absolute;  z-index:99999999" class="bg-gray-900">
+
+     <div  class="popover-2 bg-gray"  style="text-align: center; margin:auto">
+    {% if loaded %}
+
+           <div style="display:flex; gap:20px">
+
+
+
+              <a  href="{% url 'download_docx' %}" download>
+<button class="bg-white hover:bg-blue-500 text-grey-darkest font-bold py-2 px-4 rounded inline-flex items-center">
+  <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
+  <span>Download</span>
+</button>
+         </a>
+
+                 <button id="close" class="text-white" onclick="window.location.href = ''">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="white" style="width:50px; height:50px;" class="hover:fill-blue-500"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+                </button>
+           </div>
+         {% else %}
+
+         <div class="absolute right-1/2 bottom-1/2  transform translate-x-1/2 translate-y-1/2 ">
+    <div class="border-t-transparent border-solid animate-spin  rounded-full border-blue-400 border-8 h-64 w-64"></div>
+</div>
+         {% endif %}
+   </div>
+  </div>
+    <div style="height:500px; display:flex">
+
+    <form id="form" style="height:100px; width:500px;  margin:auto; display:flex; flex-direction:column; gap:10px" method="post" enctype="multipart/form-data" >
+      {% csrf_token %}
+      <div style="text-align: center; margin:auto">
+        <label for="id_file" style="font-size: 1.2rem;"></label>
+        <input type="file" id="id_file" name="file" style="display: none;" onchange="document.getElementById('filename').value = this.value.split('\\').pop().split('/').pop(); document.getElementById('submit').style.display = 'block';">
+        <div style="margin-top: 20px;">
+
+           <button type="button" class="group rounded-2xl h-12 w-48 bg-white font-bold text-lg text-gray relative overflow-hidden" onclick="document.getElementById('id_file').click();">
+       Select file
+        <div class="absolute duration-300 inset-0 w-full h-full transition-all scale-0 group-hover:scale-100 group-hover:bg-white/30 rounded-2xl">
+        </div>
+    </button>
+          <input disabled type="text" id="filename" name="filename" readonly style="display: none; margin-left: 10px; font-size: 1.2rem; padding: 5px;">
+        </div>
+      </div>
+      <div style="">
+
+          <button class="group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg shadow" type="submit" id="submit" onclick="document.getElementById('popover-2').style.display='flex';" style=" display: none; margin:auto">
+    <div class="absolute inset-0 w-3 bg-amber-400 transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+    <span class="relative text-black group-hover:text-white">Convert</span>
+  </button>
+      </div>
+    </form>
+  </div>
+ </div>
+
+<script>
+    const popover = document.getElementById('popover-2');
+    showPopover = function(){
+    alert("woiroiewoer");
+       popover.setAttribute('display': 'flex')
+    }
+
+</script>
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- component -->
+<div class="bg-gray-900  flex items-center justify-center">
+  <div class="bg-gray-800 flex-1 flex flex-col space-y-5 lg:space-y-0 lg:flex-row lg:space-x-10 max-w-6xl sm:p-6 sm:my-2 sm:mx-4 sm:rounded-2xl">
+    <!-- Navigation -->
+    <div class="bg-gray-900 px-2 lg:px-4 py-2 lg:py-10 sm:rounded-xl flex lg:flex-col justify-between">
+      <nav class="flex items-center flex-row space-x-2 lg:space-x-0 lg:flex-col lg:space-y-2">
+        <a class="text-white/50 p-4 inline-flex justify-center rounded-md hover:bg-gray-800 hover:text-white smooth-hover" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+          </svg>
+        </a>
+        <!-- Active: bg-gray-800 text-white, Not active: text-white/50 -->
+<!--        <a class="bg-gray-800 text-white p-4 inline-flex justify-center rounded-md" href="#">-->
+<!--          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" viewBox="0 0 20 20" fill="currentColor">-->
+<!--            <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />-->
+<!--          </svg>-->
+<!--        </a>-->
+        <a class="text-white/50 p-4 inline-flex justify-center rounded-md hover:bg-gray-800 hover:text-white smooth-hover" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </nav>
+      <div class="flex items-center flex-row space-x-2 lg:space-x-0 lg:flex-col lg:space-y-2">
+        <a class="text-white/50 p-4 inline-flex justify-center rounded-md hover:bg-gray-800 hover:text-white smooth-hover" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+          </svg>
+        </a>
+<!--        <a class="text-white/50 p-4 inline-flex justify-center rounded-md hover:bg-gray-800 hover:text-white smooth-hover" href="#">-->
+<!--          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" viewBox="0 0 20 20" fill="currentColor">-->
+<!--            <path fill-rule="evenodd" d="M3 3a1 1 0 011 1v12a1 1 0 11-2 0V4a1 1 0 011-1zm7.707 3.293a1 1 0 010 1.414L9.414 9H17a1 1 0 110 2H9.414l1.293 1.293a1 1 0 01-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0z" clip-rule="evenodd" />-->
+<!--          </svg>-->
+<!--        </a>-->
+      </div>
+    </div>
+    <!-- Content -->
+    <div class="flex-1 px-2 sm:px-0">
+      <div class="flex justify-between items-center">
+        <h3 class="text-3xl font-extralight text-white/50">Tools</h3>
+        <div class="inline-flex items-center space-x-2">
+<!--          <a class="bg-gray-900 text-white/50 p-2 rounded-md hover:text-white smooth-hover" href="#">-->
+<!--            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">-->
+<!--              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />-->
+<!--            </svg>-->
+<!--          </a>-->
+          <a class="bg-gray-900 text-white/50 p-2 rounded-md hover:text-white smooth-hover" onclick="shareUrl('http://127.0.0.1:8000/pdf2word/#', 'Check our ProveAI, a collection of free ai products that can make your life better.')">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-gray-700 hover:fill-white"  stroke="currentColor" viewBox="0 0 576 512"><path d="M352 224H305.5c-45 0-81.5 36.5-81.5 81.5c0 22.3 10.3 34.3 19.2 40.5c6.8 4.7 12.8 12 12.8 20.3c0 9.8-8 17.8-17.8 17.8h-2.5c-2.4 0-4.8-.4-7.1-1.4C210.8 374.8 128 333.4 128 240c0-79.5 64.5-144 144-144h80V34.7C352 15.5 367.5 0 386.7 0c8.6 0 16.8 3.2 23.2 8.9L548.1 133.3c7.6 6.8 11.9 16.5 11.9 26.7s-4.3 19.9-11.9 26.7l-139 125.1c-5.9 5.3-13.5 8.2-21.4 8.2H384c-17.7 0-32-14.3-32-32V224zM80 96c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16H400c8.8 0 16-7.2 16-16V384c0-17.7 14.3-32 32-32s32 14.3 32 32v48c0 44.2-35.8 80-80 80H80c-44.2 0-80-35.8-80-80V112C0 67.8 35.8 32 80 32h48c17.7 0 32 14.3 32 32s-14.3 32-32 32H80z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="mb-10 sm:mb-0 mt-10 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+
+      {% if tools %}
+        {% for tool in tools %}
+
+            <div class="relative group bg-gray-900 py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-gray-900/80 hover:smooth-hover">
+             <a href="{% url tool.url %}"  class="flex flex-col space-y-2 items-center ">
+          <img class="w-20 h-20 object-cover object-center rounded-full" src="data:image/jpeg;base64,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" alt= 'Ai tools'/>
+
+          <h4 class="text-white text-2xl font-bold capitalize text-center">{{tool.tool}}</h4>
+          <p class="text-white/50">Free</p>
+                    </a>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" onclick="shareUrl('http://127.0.0.1:8000/pdf2word/{{tool.url2}}', '{{tool.description}}')" class="h-6 w-6 fill-gray-700 hover:fill-green-500"  stroke="currentColor"  viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M352 224c53 0 96-43 96-96s-43-96-96-96s-96 43-96 96c0 4 .2 8 .7 11.9l-94.1 47C145.4 170.2 121.9 160 96 160c-53 0-96 43-96 96s43 96 96 96c25.9 0 49.4-10.2 66.6-26.9l94.1 47c-.5 3.9-.7 7.8-.7 11.9c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-25.9 0-49.4 10.2-66.6 26.9l-94.1-47c.5-3.9 .7-7.8 .7-11.9s-.2-8-.7-11.9l94.1-47C302.6 213.8 326.1 224 352 224z"/></svg>
+
+          <p class="absolute top-2 text-white/20 inline-flex items-center text-xs">{{tool.stars}} stars <span class="ml-2 w-2 h-2 block bg-green-500 rounded-full group-hover:animate-pulse"></span></p>
+        </div>
+
+        {% endfor %}
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
