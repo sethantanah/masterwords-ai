@@ -22,7 +22,7 @@ class Tones(models.Model):
     icon = models.CharField(max_length=3000, help_text='Icon', blank=True)
 
     class Meta:
-        ordering = ['-tone']
+        ordering = ['tone']
 
     def __str__(self):
         return self.tone
@@ -32,7 +32,7 @@ class Platforms(models.Model):
     platform = models.CharField(max_length=50, help_text='tone')
     icon = models.CharField(max_length=3000, help_text='Icon', blank=True)
     class Meta:
-        ordering = ['-platform']
+        ordering = ['platform']
 
     def __str__(self):
         return self.platform
@@ -42,7 +42,7 @@ class PostType(models.Model):
     type = models.CharField(max_length=50, help_text='tone')
     icon = models.CharField(max_length=3000, help_text='Icon', blank=True)
     class Meta:
-        ordering = ['-type']
+        ordering = ['type']
 
     def __str__(self):
         return self.type
