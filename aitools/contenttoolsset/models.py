@@ -10,6 +10,9 @@ class Tools(models.Model):
     image = models.CharField(max_length=3000, help_text='image', blank=True)
     ext = models.BooleanField(default=False)
 
+    class Meta:
+        ordering = ['-tool']
+
     def __str__(self):
         return self.tool
 
@@ -18,15 +21,18 @@ class Tones(models.Model):
     tone = models.CharField(max_length=50, help_text='tone')
     icon = models.CharField(max_length=3000, help_text='Icon', blank=True)
 
+    class Meta:
+        ordering = ['-tone']
+
     def __str__(self):
         return self.tone
-
-
 
 
 class Platforms(models.Model):
     platform = models.CharField(max_length=50, help_text='tone')
     icon = models.CharField(max_length=3000, help_text='Icon', blank=True)
+    class Meta:
+        ordering = ['-platform']
 
     def __str__(self):
         return self.platform
@@ -35,6 +41,8 @@ class Platforms(models.Model):
 class PostType(models.Model):
     type = models.CharField(max_length=50, help_text='tone')
     icon = models.CharField(max_length=3000, help_text='Icon', blank=True)
+    class Meta:
+        ordering = ['-type']
 
     def __str__(self):
         return self.type
